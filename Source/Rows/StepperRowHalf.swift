@@ -140,7 +140,7 @@ open class StepperCellHalf: Cell<Double>, CellType {
 
 // MARK: StepperRow
 
-open class _StepperRowTenth: Row<StepperCell> {
+open class _StepperRowHalf: Row<StepperCell> {
     required public init(tag: String?) {
         super.init(tag: tag)
         displayValueFor = { value in
@@ -150,7 +150,7 @@ open class _StepperRowTenth: Row<StepperCell> {
 }
 
 /// Double row that has a UIStepper as accessoryType
-public final class StepperRowTenth: _StepperRow, RowType {
+public final class StepperRowHalf: _StepperRow, RowType {
     required public init(tag: String?) {
         super.init(tag: tag)
     }
