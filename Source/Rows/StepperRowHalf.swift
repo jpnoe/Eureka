@@ -89,7 +89,6 @@ open class StepperCellHalf: Cell<Double>, CellType {
     }
 
     @objc func valueChanged() {
-        row.value = stepper.value * 0.5
         row.updateCell()
     }
   
