@@ -91,6 +91,7 @@
 		B244E6541FE1C94F0026B944 /* AlertOptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244E6531FE1C94F0026B944 /* AlertOptionsRow.swift */; };
 		B257FE2E1EC0F66900043911 /* RowsInsertionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257FE2D1EC0F66900043911 /* RowsInsertionTests.swift */; };
 		B2A401161EC0BA140042EDF0 /* SectionsInsertionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A401151EC0BA140042EDF0 /* SectionsInsertionTests.swift */; };
+		EEBBFE9024F779730045A221 /* StepperRowHalf.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBBFE8F24F779730045A221 /* StepperRowHalf.swift */; };
 		FA56B6AF1DBAD38900407C94 /* RuleEqualsToRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA56B6AE1DBAD38900407C94 /* RuleEqualsToRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,7 @@
 		B244E6531FE1C94F0026B944 /* AlertOptionsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertOptionsRow.swift; path = Common/AlertOptionsRow.swift; sourceTree = "<group>"; };
 		B257FE2D1EC0F66900043911 /* RowsInsertionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RowsInsertionTests.swift; path = Tests/RowsInsertionTests.swift; sourceTree = SOURCE_ROOT; };
 		B2A401151EC0BA140042EDF0 /* SectionsInsertionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionsInsertionTests.swift; path = Tests/SectionsInsertionTests.swift; sourceTree = SOURCE_ROOT; };
+		EEBBFE8F24F779730045A221 /* StepperRowHalf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperRowHalf.swift; sourceTree = "<group>"; };
 		FA56B6AE1DBAD38900407C94 /* RuleEqualsToRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleEqualsToRow.swift; path = Source/Validations/RuleEqualsToRow.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -251,6 +253,7 @@
 				2859CDAE1C7D0D990002982F /* ActionSheetRow.swift */,
 				2859CDB01C7D0E010002982F /* AlertRow.swift */,
 				2859CDA21C7CF4050002982F /* ButtonRow.swift */,
+				EEBBFE8F24F779730045A221 /* StepperRowHalf.swift */,
 				2859CD991C7CF2020002982F /* ButtonRowWithPresent.swift */,
 				2859CDA41C7CF51A0002982F /* CheckRow.swift */,
 				2859CDFE1C7DF9A70002982F /* DateRow.swift */,
@@ -527,6 +530,7 @@
 				28EEBFE81C7E1D7E00300699 /* CellType.swift in Sources */,
 				8FCCF92320A473E7004793A0 /* DoublePickerInputRow.swift in Sources */,
 				28EEC0241C7E3B1D00300699 /* PickerRow.swift in Sources */,
+				EEBBFE9024F779730045A221 /* StepperRowHalf.swift in Sources */,
 				28EEC0281C7E3B4B00300699 /* FieldsRow.swift in Sources */,
 				2859CD961C7CF1FD0002982F /* Helpers.swift in Sources */,
 				287E7D821D74E64C0065F4DE /* RuleURL.swift in Sources */,
