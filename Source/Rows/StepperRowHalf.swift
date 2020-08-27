@@ -72,12 +72,16 @@ open class StepperCellHalf: Cell<Double>, CellType {
     }
   
     open override func update() {
+        let temp = row.value
+        row.value = (row.value ?? 0) / 2
+        stepper.value = row.value ?? 0
         super.update()
         detailTextLabel?.text = nil
         stepper.isEnabled = !row.isDisabled
         
         titleLabel.isHidden = !shouldShowTitle
-        stepper.value = (row.value ?? 0) * 2
+        stepper.value = temp ?? 0
+        row.value = stepper.value
         stepper.alpha = row.isDisabled ? 0.3 : 1.0
         valueLabel?.textColor = tintColor
         valueLabel?.alpha = row.isDisabled ? 0.3 : 1.0
