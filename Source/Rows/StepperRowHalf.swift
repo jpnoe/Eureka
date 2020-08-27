@@ -45,6 +45,7 @@ open class StepperCellHalf: Cell<Double>, CellType {
             self.titleLabel = title
          
             let stepper = UIStepper()
+            stepper.stepValue = 0.5
             stepper.translatesAutoresizingMaskIntoConstraints = false
             stepper.setContentHuggingPriority(UILayoutPriority(rawValue: 500), for: .horizontal)
             self.stepper = stepper
@@ -72,16 +73,12 @@ open class StepperCellHalf: Cell<Double>, CellType {
     }
   
     open override func update() {
-        let temp = row.value
-        row.value = (row.value ?? 0) / 2
-        stepper.value = row.value ?? 0
         super.update()
         detailTextLabel?.text = nil
         stepper.isEnabled = !row.isDisabled
         
         titleLabel.isHidden = !shouldShowTitle
-        stepper.value = temp ?? 0
-        row.value = stepper.value
+        stepper.value = row.value ?? 0
         stepper.alpha = row.isDisabled ? 0.3 : 1.0
         valueLabel?.textColor = tintColor
         valueLabel?.alpha = row.isDisabled ? 0.3 : 1.0
