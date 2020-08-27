@@ -446,14 +446,29 @@ open class FormViewController: UIViewController, FormViewControllerProtocol, For
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    var label: UILabel = {
+           let label = UILabel()
+           label.translatesAutoresizingMaskIntoConstraints = false
+           label.text = "Enter Nutritional Information"
+           label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+           return label
+       }()
 
     open override func viewDidLoad() {
         super.viewDidLoad()
         navigationAccessoryView = customNavigationAccessoryView ?? NavigationAccessoryView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44.0))
         navigationAccessoryView.autoresizingMask = .flexibleWidth
-
+        
+        if label.superview == nil {
+            view.addSubview(label)
+            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            label.heightAnchor.constraint(equalToConstant: label.intrinsicContentSize.height).isActive = true
+            label.widthAnchor.constraint(equalToConstant: label.intrinsicContentSize.width).isActive = true
+        }
         if tableView == nil {
-            tableView = UITableView(frame: view.bounds, style: tableViewStyle)
+            tableView = UITableView(frame: CGRect(x: view.bounds.minX, y: view.bounds.minY + label.frame.height, width: view.bounds.width, height: view.bounds.height - label.frame.height), style: tableViewStyle)
             tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             tableView.cellLayoutMarginsFollowReadableWidth = false
         }
