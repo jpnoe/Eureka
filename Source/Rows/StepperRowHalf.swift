@@ -45,8 +45,8 @@ open class StepperCellHalf: Cell<Double>, CellType {
             self.titleLabel = title
          
             let stepper = UIStepper()
-            stepper.stepValue = 0.5
             stepper.translatesAutoresizingMaskIntoConstraints = false
+            stepper.stepValue = 0.5
             stepper.setContentHuggingPriority(UILayoutPriority(rawValue: 500), for: .horizontal)
             self.stepper = stepper
           
@@ -59,7 +59,7 @@ open class StepperCellHalf: Cell<Double>, CellType {
             setNeedsUpdateConstraints()
         }
         selectionStyle = .none
-        stepper.addTarget(self, action: #selector(StepperCell.valueChanged), for: .valueChanged)
+        stepper.addTarget(self, action: #selector(StepperCellHalf.valueChanged), for: .valueChanged)
     }
 
     open func setupValueLabel() {
@@ -86,6 +86,7 @@ open class StepperCellHalf: Cell<Double>, CellType {
     }
 
     @objc func valueChanged() {
+        row.value = stepper.value
         row.updateCell()
     }
   
@@ -93,8 +94,8 @@ open class StepperCellHalf: Cell<Double>, CellType {
         return row?.title?.isEmpty == false
     }
   
-    private var stepperRow: StepperRow {
-        return row as! StepperRow
+    private var stepperRowHalf: StepperRowHalf {
+        return row as! StepperRowHalf
     }
     
     deinit {
