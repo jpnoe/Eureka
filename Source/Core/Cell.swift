@@ -127,7 +127,7 @@ open class Cell<T>: BaseCell, TypedCellType where T: Equatable {
         if #available(iOS 13.0, *) {
             textLabel?.textColor = .tertiaryLabel
         } else {
-            textLabel?.textColor = gray
+            textLabel?.textColor = .gray
         }
         detailTextLabel?.text = row.displayValueFor?(row.value) ?? (row as? NoValueDisplayTextConformance)?.noValueDisplayText
     }
