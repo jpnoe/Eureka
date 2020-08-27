@@ -125,9 +125,9 @@ open class Cell<T>: BaseCell, TypedCellType where T: Equatable {
         super.update()
         textLabel?.text = row.title
         if #available(iOS 13.0, *) {
-            textLabel?.textColor = row.isDisabled ? .tertiaryLabel : .label
+            textLabel?.textColor = .tertiaryLabel
         } else {
-            textLabel?.textColor = row.isDisabled ? .gray : .black
+            textLabel?.textColor = gray
         }
         detailTextLabel?.text = row.displayValueFor?(row.value) ?? (row as? NoValueDisplayTextConformance)?.noValueDisplayText
     }
