@@ -77,7 +77,7 @@ open class StepperCellHalf: Cell<Double>, CellType {
         stepper.isEnabled = !row.isDisabled
         
         titleLabel.isHidden = !shouldShowTitle
-        stepper.value = row.value ?? 0
+        stepper.value = (row.value ?? 0) * 2
         stepper.alpha = row.isDisabled ? 0.3 : 1.0
         valueLabel?.textColor = tintColor
         valueLabel?.alpha = row.isDisabled ? 0.3 : 1.0
